@@ -12,11 +12,14 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class QuoteService {
     private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
-
-    @Autowired
     private QuoteMapper quoteMapper;
 
-    public QuoteDTO getQuote() {
+    @Autowired
+    public QuoteService(QuoteMapper quoteMapper) {
+		this.quoteMapper = quoteMapper;
+	}
+
+	public QuoteDTO getQuote() {
         RestTemplate restTemplate = new RestTemplate();
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
         logger.info(quote.toString());
