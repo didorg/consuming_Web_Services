@@ -11,10 +11,14 @@ import java.util.List;
 @Service
 public class ResultService {
 
+    private QuoteService quoteService;
+    
     @Autowired
-    QuoteService quoteService;
+    public ResultService(QuoteService quoteService) {
+		this.quoteService = quoteService;
+	}
 
-    public ResultDTO getResultDTO(String name) {
+	public ResultDTO getResultDTO(String name) {
         ResultDTO resultDTO = new ResultDTO();
 
         resultDTO.setName(name);
