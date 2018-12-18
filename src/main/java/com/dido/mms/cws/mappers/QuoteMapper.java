@@ -9,21 +9,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class QuoteMapper {
 
-    public QuoteDTO mapperToDTO(Quote quote) {
-        QuoteDTO quoteDTO = new QuoteDTO();
+  public QuoteDTO mapperToDTO(Quote quote) {
+    QuoteDTO quoteDTO = new QuoteDTO();
 
-        quoteDTO.setType(quote.getType());
-        quoteDTO.setValue(this.mapperValue(quote.getValue()));
+    quoteDTO.setType(quote.getType());
+    quoteDTO.setValue(this.mapperValue(quote.getValue()));
 
-        return quoteDTO;
-    }
+    return quoteDTO;
+  }
 
-    private ValueDTO mapperValue(Value value) {
-        ValueDTO valueDTO = new ValueDTO();
+  private ValueDTO mapperValue(Value value) {
+    ValueDTO valueDTO = new ValueDTO();
 
-        valueDTO.setId(value.getId());
-        valueDTO.setQuote(value.getQuote());
+    valueDTO.setId(value.getId());
+    valueDTO.setQuote(value.getQuote());
 
-        return valueDTO;
-    }
+    return valueDTO;
+  }
 }

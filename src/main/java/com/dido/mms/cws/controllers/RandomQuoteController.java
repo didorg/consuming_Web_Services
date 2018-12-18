@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RandomQuoteController {
 
-    @Autowired
-    ResultService resultService;
+  ResultService resultService;
 
-    @RequestMapping(value = "/random")
-    public ResultDTO getRandomQuotes(@RequestParam(value = "name", defaultValue = "enter param -> ?name=value") String name){
-        return this.resultService.getResultDTO(name);
-    }
+  @Autowired
+  public RandomQuoteController(ResultService resultService) {
+    this.resultService = resultService;
+  }
+
+  @RequestMapping(value = "/random")
+  public ResultDTO getRandomQuotes(
+      @RequestParam(value = "name", defaultValue = "enter param -> ?name=value") String name) {
+    return this.resultService.getResultDTO(name);
+  }
 }

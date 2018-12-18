@@ -11,19 +11,25 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class QuoteService {
-    private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
 
-    @Autowired
-    private QuoteMapper quoteMapper;
+  private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
 
-    public QuoteDTO getQuote() {
-        RestTemplate restTemplate = new RestTemplate();
-        Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-        logger.info(quote.toString());
+  private QuoteMapper quoteMapper;
 
-        QuoteDTO dto = this.quoteMapper.mapperToDTO(quote);
+  @Autowired
+  public QuoteService(QuoteMapper quoteMapper) {
+    this.quoteMapper = quoteMapper;
+  }
 
-        return dto;
-    }
+  public QuoteDTO getQuote() {
+    RestTemplate restTemplate = new RestTemplate();
+    Quote quote = restTemplate
+        .getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
+    logger.info(quote.toString());
+
+    QuoteDTO dto = this.quoteMapper.mapperToDTO(quote);
+
+    return dto;
+  }
 
 }

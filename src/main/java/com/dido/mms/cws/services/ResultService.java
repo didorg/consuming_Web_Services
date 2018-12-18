@@ -11,26 +11,30 @@ import java.util.List;
 @Service
 public class ResultService {
 
-    @Autowired
-    QuoteService quoteService;
+  QuoteService quoteService;
 
-    public ResultDTO getResultDTO(String name) {
-        ResultDTO resultDTO = new ResultDTO();
+  @Autowired
+  public ResultService(QuoteService quoteService) {
+    this.quoteService = quoteService;
+  }
 
-        resultDTO.setName(name);
-        resultDTO.setQuotes(this.getQuotes());
+  public ResultDTO getResultDTO(String name) {
+    ResultDTO resultDTO = new ResultDTO();
 
-        return resultDTO;
-    }
+    resultDTO.setName(name);
+    resultDTO.setQuotes(this.getQuotes());
 
-    private List<QuoteDTO> getQuotes() {
-        List<QuoteDTO> quotelist = new ArrayList<>();
-        QuoteDTO dto1 = this.quoteService.getQuote();
-        QuoteDTO dto2 = this.quoteService.getQuote();
+    return resultDTO;
+  }
 
-        quotelist.add(dto1);
-        quotelist.add(dto2);
+  private List<QuoteDTO> getQuotes() {
+    List<QuoteDTO> quotelist = new ArrayList<>();
+    QuoteDTO dto1 = this.quoteService.getQuote();
+    QuoteDTO dto2 = this.quoteService.getQuote();
 
-        return quotelist;
-    }
+    quotelist.add(dto1);
+    quotelist.add(dto2);
+
+    return quotelist;
+  }
 }

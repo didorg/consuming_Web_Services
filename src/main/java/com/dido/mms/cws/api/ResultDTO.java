@@ -5,43 +5,44 @@ import com.dido.mms.cws.constans.Sites;
 import java.util.List;
 
 public class ResultDTO {
-    private String name;
-    private String SIGNATURE = Sites.SIGNATURE;
-    private String SITE = Sites.GITHUB;
-    List<QuoteDTO> quotes;
 
-    public ResultDTO() {
-    }
+  private String name;
+  private String SIGNATURE = Sites.SIGNATURE;
+  private String SITE = Sites.GITHUB;
+  List<QuoteDTO> quotes;
 
-    public String getName() {
-        return name;
-    }
+  public ResultDTO() {
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getSIGNATURE() {
-        return SIGNATURE;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public void setSIGNATURE(String SIGNATURE) {
-        this.SIGNATURE = SIGNATURE;
-    }
+  public String getSIGNATURE() {
+    return SIGNATURE;
+  }
 
-    public String getSITE() {
-        return SITE;
-    }
+  public void setSIGNATURE(String SIGNATURE) {
+    this.SIGNATURE = SIGNATURE;
+  }
 
-    public void setSITE(String SITE) {
-        this.SITE = SITE;
-    }
+  public String getSITE() {
+    return SITE;
+  }
 
-    public List<QuoteDTO> getQuotes() {
-        return quotes;
-    }
+  public void setSITE(String SITE) {
+    this.SITE = SITE;
+  }
 
-    public void setQuotes(List<QuoteDTO> quotes) {
-        this.quotes = quotes;
-    }
+  public List<QuoteDTO> getQuotes() {
+    return quotes;
+  }
+
+  public void setQuotes(List<QuoteDTO> quotes) {
+    this.quotes = quotes;
+  }
 }
