@@ -1,4 +1,4 @@
-package com.dido.mms.cws;
+package com.dido.cws;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,9 +1,9 @@
-package com.dido.mms.cws.mappers;
+package com.dido.cws.mappers;
 
-import com.dido.mms.cws.rest.Quote;
-import com.dido.mms.cws.rest.Value;
-import com.dido.mms.cws.api.QuoteDTO;
-import com.dido.mms.cws.api.ValueDTO;
+import com.dido.cws.rest.Quote;
+import com.dido.cws.rest.Value;
+import com.dido.cws.api.QuoteDTO;
+import com.dido.cws.api.ValueDTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,7 +1,7 @@
-package com.dido.mms.cws.controllers;
+package com.dido.cws.controllers;
 
-import com.dido.mms.cws.api.ResultDTO;
-import com.dido.mms.cws.services.ResultService;
+import com.dido.cws.services.ResultService;
+import com.dido.cws.api.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,4 +1,4 @@
-package com.dido.mms.cws.api;
+package com.dido.cws.api;
 
 public class ValueDTO {
 
