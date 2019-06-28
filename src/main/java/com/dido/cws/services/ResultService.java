@@ -1,7 +1,7 @@
-package com.dido.mms.cws.services;
+package com.dido.cws.services;
 
-import com.dido.mms.cws.api.QuoteDTO;
-import com.dido.mms.cws.api.ResultDTO;
+import com.dido.cws.api.QuoteDTO;
+import com.dido.cws.api.ResultDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

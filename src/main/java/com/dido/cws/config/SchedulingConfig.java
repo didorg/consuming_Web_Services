@@ -1,4 +1,4 @@
-package com.dido.mms.cws.config;
+package com.dido.cws.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

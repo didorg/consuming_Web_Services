@@ -1,4 +1,4 @@
-package com.dido.mms.cws.rest;
+package com.dido.cws.rest;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

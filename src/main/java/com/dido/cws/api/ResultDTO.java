@@ -1,6 +1,6 @@
-package com.dido.mms.cws.api;
+package com.dido.cws.api;
 
-import com.dido.mms.cws.constans.Sites;
+import com.dido.cws.constans.Sites;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ public class ResultDTO {
   private String name;
   private String SIGNATURE = Sites.SIGNATURE;
   private String SITE = Sites.GITHUB;
-  List<QuoteDTO> quotes;
+  private List<QuoteDTO> quotes;
 
   public ResultDTO() {
   }

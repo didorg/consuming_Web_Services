@@ -1,4 +1,4 @@
-package com.dido.mms.cws;
+package com.dido.cws;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

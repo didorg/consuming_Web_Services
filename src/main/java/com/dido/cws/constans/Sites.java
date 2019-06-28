@@ -1,4 +1,4 @@
-package com.dido.mms.cws.constans;
+package com.dido.cws.constans;
 
 public interface Sites {
 
