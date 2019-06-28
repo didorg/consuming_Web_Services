@@ -14,14 +14,15 @@ public class QuoteService {
 
   private static final Logger logger = LoggerFactory.getLogger(QuoteService.class);
   private QuoteMapper quoteMapper;
+  private RestTemplate restTemplate;
 
   @Autowired
-  public QuoteService(QuoteMapper quoteMapper) {
+  public QuoteService(QuoteMapper quoteMapper, RestTemplate restTemplate) {
     this.quoteMapper = quoteMapper;
+    this.restTemplate = restTemplate;
   }
 
   QuoteDTO getQuote() {
-    RestTemplate restTemplate = new RestTemplate();
     Quote quote = restTemplate
         .getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
     if (quote != null) {
