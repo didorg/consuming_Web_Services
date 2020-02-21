@@ -5,7 +5,10 @@
 > src->main->java->com.dido.mms.cws and then run the Class  
 
 ##### in your browser, put this url:
-- http://localhost:8080/random
+- http://localhost:8080/random 
+
+> username: user  
+> password: password 
 
 > Now you see the json:  
 > {...}  
