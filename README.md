@@ -10,7 +10,7 @@
 > username: user  
 > password: password 
 
-> Now you see the json:  
+> Now you see the json  
 > {...}  
 
 for chrome you need open:   
